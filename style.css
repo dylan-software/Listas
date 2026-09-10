@@ -37,7 +37,7 @@ h1, h2 {
   color: var(--ink);
 }
 
-.fondo-textura {
+.background-texture {
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -51,7 +51,7 @@ h1, h2 {
   z-index: 0;
 }
 
-.encabezado {
+.header {
   position: relative;
   z-index: 1;
   padding: 2.4rem 1.75rem 1.6rem;
@@ -59,14 +59,14 @@ h1, h2 {
   background: var(--surface);
 }
 
-.encabezado__marca {
+.header__brand {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
 
-.encabezado__indice {
+.header__index {
   font-size: 0.8rem;
   color: var(--accent);
   border: 1px solid var(--accent);
@@ -74,17 +74,17 @@ h1, h2 {
   padding: 0.15rem 0.65rem;
 }
 
-.encabezado h1 {
+.header h1 {
   font-size: 2rem;
 }
 
-.encabezado__descripcion {
+.header__description {
   max-width: 62ch;
   color: var(--muted);
   margin: 0.6rem 0 0;
 }
 
-.contenido {
+.content {
   position: relative;
   z-index: 1;
   max-width: 1080px;
@@ -97,7 +97,7 @@ h1, h2 {
 }
 
 @media (max-width: 860px) {
-  .contenido {
+  .content {
     grid-template-columns: 1fr;
   }
 }
@@ -114,13 +114,13 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
-.formulario {
+.form {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
 }
 
-.campo {
+.field {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -128,8 +128,8 @@ h1, h2 {
   color: var(--muted);
 }
 
-.campo input,
-.select-estado {
+.field input,
+.status-select {
   font: inherit;
   padding: 0.55rem 0.7rem;
   border: 1px solid var(--line);
@@ -138,8 +138,8 @@ h1, h2 {
   background: var(--surface);
 }
 
-.campo input:focus,
-.select-estado:focus,
+.field input:focus,
+.status-select:focus,
 .btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
@@ -153,57 +153,57 @@ h1, h2 {
   cursor: pointer;
 }
 
-.btn-primario {
+.btn-primary {
   background: var(--accent);
   color: var(--accent-ink);
   margin-top: 0.3rem;
 }
 
-.btn-primario:hover {
+.btn-primary:hover {
   background: #275c4e;
 }
 
-.btn-secundario {
+.btn-secondary {
   background: var(--surface);
   border: 1px solid var(--accent);
   color: var(--accent);
 }
 
-.btn-secundario:hover {
+.btn-secondary:hover {
   background: var(--ok-bg);
 }
 
-.btn-eliminar {
+.btn-delete {
   background: var(--warn-bg);
   color: var(--warn);
 }
 
-.btn-eliminar:hover {
+.btn-delete:hover {
   background: #f0dccb;
 }
 
-.buscador {
+.search-box {
   margin-top: 1.4rem;
   padding-top: 1.2rem;
   border-top: 1px dashed var(--line);
 }
 
-.buscador__fila {
+.search-box__row {
   display: flex;
   gap: 0.5rem;
 }
 
-.buscador__fila input {
+.search-box__row input {
   flex: 1;
 }
 
-.capacidad {
+.capacity {
   margin-top: 1.2rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-.mensaje {
+.message {
   margin-top: 0.8rem;
   padding: 0.6rem 0.75rem;
   border-radius: 6px;
@@ -211,31 +211,31 @@ h1, h2 {
   transition: opacity 0.2s ease;
 }
 
-.mensaje--ok {
+.message--ok {
   background: var(--ok-bg);
   color: #1e4d3d;
 }
 
-.mensaje--error {
+.message--error {
   background: var(--warn-bg);
   color: var(--warn);
 }
 
-.oculto {
+.hidden {
   display: none;
 }
 
-.tabla-envoltorio {
+.table-wrapper {
   overflow-x: auto;
 }
 
-.tabla-pedidos {
+.orders-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.92rem;
 }
 
-.tabla-pedidos th {
+.orders-table th {
   text-align: left;
   font-weight: 600;
   color: var(--muted);
@@ -243,21 +243,21 @@ h1, h2 {
   padding: 0.6rem 0.5rem;
 }
 
-.tabla-pedidos td {
+.orders-table td {
   padding: 0.6rem 0.5rem;
   border-bottom: 1px solid var(--line);
   vertical-align: middle;
 }
 
-.tabla-pedidos tbody tr:hover {
+.orders-table tbody tr:hover {
   background: rgba(47, 111, 94, 0.05);
 }
 
-.fila-resaltada {
+.highlighted-row {
   background: var(--ok-bg) !important;
 }
 
-.fila-vacia {
+.empty-row {
   text-align: center;
   color: var(--muted);
   padding: 1.5rem 0.5rem;
@@ -270,17 +270,17 @@ h1, h2 {
   font-size: 0.8rem;
 }
 
-.badge--pendiente {
+.badge--pending {
   background: var(--pend-bg);
   color: #5b5a1a;
 }
 
-.badge--proceso {
+.badge--in-progress {
   background: var(--proc-bg);
   color: #2b5169;
 }
 
-.badge--exito {
+.badge--success {
   background: var(--ok-bg);
   color: #1e4d3d;
 }
@@ -290,7 +290,7 @@ h1, h2 {
   color: var(--warn);
 }
 
-.pie {
+.footer {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -299,7 +299,7 @@ h1, h2 {
   padding: 1.5rem 1rem 2rem;
 }
 
-.pie code {
+.footer code {
   background: var(--proc-bg);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;

@@ -1,12 +1,12 @@
 declare enum OrderStatus {
-    Requested = "Solicitado",
-    InQuote = "En cotizaci\u00F3n",
-    Approved = "Aprobado",
-    InPreparation = "En preparaci\u00F3n",
-    Shipped = "Enviado",
-    Delivered = "Entregado",
-    Paid = "Pagado",
-    Rejected = "Rechazado"
+    Requested = "Requested",
+    InQuote = "In quote",
+    Approved = "Approved",
+    InPreparation = "In preparation",
+    Shipped = "Shipped",
+    Delivered = "Delivered",
+    Paid = "Paid",
+    Rejected = "Rejected"
 }
 declare class Order {
     id: string;
@@ -32,14 +32,14 @@ declare const MAX_CAPACITY = 10;
 declare const orderManagement: OrderManagement;
 declare const form: HTMLFormElement;
 declare const inputId: HTMLInputElement;
-declare const inputCliente: HTMLInputElement;
-declare const inputProducto: HTMLInputElement;
-declare const inputCantidad: HTMLInputElement;
-declare const inputBuscar: HTMLInputElement;
-declare const btnBuscar: HTMLButtonElement;
-declare const tablaBody: HTMLTableSectionElement;
-declare const capacidadTexto: HTMLParagraphElement;
-declare const mensaje: HTMLDivElement;
+declare const inputCustomer: HTMLInputElement;
+declare const inputProduct: HTMLInputElement;
+declare const inputQuantity: HTMLInputElement;
+declare const inputSearch: HTMLInputElement;
+declare const btnSearch: HTMLButtonElement;
+declare const tableBody: HTMLTableSectionElement;
+declare const capacityText: HTMLParagraphElement;
+declare const message: HTMLDivElement;
 declare const orderedStatuses: OrderStatus[];
 declare function showMessage(text: string, type: "ok" | "error"): void;
 declare function createStatusSelect(order: Order): HTMLSelectElement;

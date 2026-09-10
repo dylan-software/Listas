@@ -1,90 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gestión de pedidos · Taller de Listas</title>
+  <title>Order Management · Lists Workshop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="fondo-textura" aria-hidden="true"></div>
+  <div class="background-texture" aria-hidden="true"></div>
 
-  <header class="encabezado">
-    <div class="encabezado__marca">
-      <span class="encabezado__indice">Lista de pedidos</span>
-      <h1>Bodega &amp; Despachos</h1>
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__index">Order list</span>
+      <h1>Warehouse &amp; Shipping</h1>
     </div>
-    <p class="encabezado__descripcion">
-      Cada pedido recorre el mismo camino: se solicita, se cotiza, se aprueba,
-      se prepara, se envía y se cobra. Esta tabla es esa lista en vivo.
+    <p class="header__description">
+      Every order follows the same path: it's requested, quoted, approved,
+      prepared, shipped, and paid. This table is that list, live.
     </p>
   </header>
 
-  <main class="contenido">
-    <section class="panel panel--formulario" aria-labelledby="titulo-formulario">
-      <h2 id="titulo-formulario">Registrar pedido</h2>
+  <main class="content">
+    <section class="panel panel--form" aria-labelledby="form-title">
+      <h2 id="form-title">Register order</h2>
 
-      <form id="form-pedido" class="formulario" novalidate>
-        <label class="campo">
-          <span>ID del pedido</span>
+      <form id="order-form" class="form" novalidate>
+        <label class="field">
+          <span>Order ID</span>
           <input id="input-id" type="text" placeholder="P-005" required />
         </label>
 
-        <label class="campo">
-          <span>Cliente</span>
-          <input id="input-cliente" type="text" placeholder="Nombre del cliente" required />
+        <label class="field">
+          <span>Customer</span>
+          <input id="input-customer" type="text" placeholder="Customer name" required />
         </label>
 
-        <label class="campo">
-          <span>Producto</span>
-          <input id="input-producto" type="text" placeholder="Producto solicitado" required />
+        <label class="field">
+          <span>Product</span>
+          <input id="input-product" type="text" placeholder="Requested product" required />
         </label>
 
-        <label class="campo">
-          <span>Cantidad</span>
-          <input id="input-cantidad" type="number" min="1" placeholder="1" required />
+        <label class="field">
+          <span>Quantity</span>
+          <input id="input-quantity" type="number" min="1" placeholder="1" required />
         </label>
 
-        <button type="submit" class="btn btn-primario">Agregar a la lista</button>
+        <button type="submit" class="btn btn-primary">Add to list</button>
       </form>
 
-      <div class="buscador">
-        <label class="campo">
-          <span>Buscar pedido por ID</span>
-          <div class="buscador__fila">
-            <input id="input-buscar" type="text" placeholder="P-002" />
-            <button id="btn-buscar" class="btn btn-secundario" type="button">Buscar</button>
+      <div class="search-box">
+        <label class="field">
+          <span>Search order by ID</span>
+          <div class="search-box__row">
+            <input id="input-search" type="text" placeholder="P-002" />
+            <button id="btn-search" class="btn btn-secondary" type="button">Search</button>
           </div>
         </label>
       </div>
 
-      <p id="capacidad-texto" class="capacidad"></p>
-      <div id="mensaje" class="mensaje oculto" role="status"></div>
+      <p id="capacity-text" class="capacity"></p>
+      <div id="message" class="message hidden" role="status"></div>
     </section>
 
-    <section class="panel panel--tabla" aria-labelledby="titulo-tabla">
-      <h2 id="titulo-tabla">Pedidos en la lista</h2>
-      <div class="tabla-envoltorio">
-        <table class="tabla-pedidos">
+    <section class="panel panel--table" aria-labelledby="table-title">
+      <h2 id="table-title">Orders in the list</h2>
+      <div class="table-wrapper">
+        <table class="orders-table">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Cliente</th>
-              <th>Producto</th>
-              <th>Estado</th>
-              <th>Cambiar estado</th>
-              <th>Acciones</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Change status</th>
+              <th>Actions</th>
             </tr>
           </thead>
-          <tbody id="tabla-pedidos-body"></tbody>
+          <tbody id="orders-table-body"></tbody>
         </table>
       </div>
     </section>
   </main>
 
-  <footer class="pie">
-    Taller de Listas — estructura de datos: arreglo (lista) de pedidos, gestionado con
-    <code>search</code>, <code>add</code>, <code>delete</code>, <code>update</code> y <code>list</code>.
+  <footer class="footer">
+    Lists Workshop — data structure: array (list) of orders, managed with
+    <code>search</code>, <code>add</code>, <code>delete</code>, <code>update</code>, and <code>list</code>.
   </footer>
     <script src="listas.js"></script>
 </body>
